@@ -1,0 +1,266 @@
+<html>
+    <head>
+        <title>{{ site.title }}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                font-size: 65%;
+                background-color: #262831;
+                margin: 0;
+            }
+            html {margin: 0;}
+            .container {
+                padding: 1.5vw;
+                color: #ebf1e0;
+                font-size: 1.6em;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+            h2 a, h2 a:visited, h2 a:link, h2 a:hover  {
+                text-decoration: none;
+                color: #ebf1e0;
+                font-weight:normal;
+            }
+            .header a, .header a:visited, .header a:link, .header a:hover  {
+                padding: 5px;
+                text-decoration: none;
+                color: #516350;
+                font-weight: bold;
+            }
+            .header .sep {
+                width: 1vw;
+                display: inline-block;
+            }
+            a, a:visited, a:link, a:hover  {
+                text-decoration: none;
+                color: #F5BD79;
+                font-weight: bold;
+            }
+            .emph {
+                text-decoration: none;
+                color: #516350;
+                font-weight: bold;
+            }
+            .divider {
+                width: 100%;
+                height: 10px;
+                background-color: #1e1f25;
+            }
+            p {
+                padding-left: 1.5vw;
+                padding-right: 1.5vw;
+                padding-top: 1vw;
+                padding-bottom: 1vw;
+                text-align: justify;
+                line-height: 150%;
+                margin: 0;
+            }
+            .avatar {
+                text-align: center;
+            }
+            .avatar img {
+                width: 200px;
+                border: 5px solid #516350;
+                border-radius: 50%;
+                height: 200px;
+            }
+            .header {
+                text-align: center;
+                letter-spacing: 1px;
+            }
+            h1 {
+                color: #F5BD79;
+                text-align: center;
+                font-weight: normal;
+                font-size: 2.5em;
+                margin-left: 0;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+            h2 {
+                color: #ebf1e0;
+                text-align: center;
+                font-weight: normal;
+                font-size: 1.7em;
+                margin-left: 0;
+                margin-bottom: 0;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                text-transform: uppercase;
+            }
+            .blog h2 {color: #262831}
+            h3 {
+                color: #F5BD79;
+                text-align: center;
+                font-weight: normal;
+                font-size: 1.6em;
+                margin-left: 0;
+                margin-bottom: 0;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                text-transform: uppercase;
+                padding-left: 1.5vw;
+            }
+            .quote {
+                font-style: italic;
+                color: #516350;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                padding-bottom: 0;
+                padding-top: 0;
+                margin: 0;
+            }
+            .middle {
+                background-color: #1e1f25;
+                padding-top: 1vw;
+                padding-bottom: 1vw;
+            }
+            .coloured {
+                background-color: #F5BD79;
+                color: #262831;
+                padding-top: 1.5vw;
+                padding-bottom: 1.5vw;
+            }
+            .news {
+                background-color: #F5BD79;
+                color: #262831;
+                padding-top: 1.5vw;
+                padding-bottom: 1.5vw;
+                font-size: 1em;
+            }
+            .news .emph {
+                color: #262831;
+                font-weight: bold;
+            }
+            .blue a, .blue a:link, .blue a:visited, .blue a:hover {
+                color: #516350;
+                font-size: 0.8em;
+                text-transform: uppercase;
+            }
+            .blog {
+                margin-top: 10px;
+                width: 100%;
+            }
+            .blog td {
+                vertical-align: top;
+                border-bottom: 5px solid #262831;
+            }
+            .blog .post {
+                background-color: #F5BD79;
+                color: #262831;
+                padding-right: 1.5vw;
+                padding-top: 1vw;
+                padding-bottom: 1vw;
+                text-align: justify;
+                line-height: 150%;
+            }
+            .blog .date {
+                background-color: #F5BD79;
+                color: #262831;
+                width: 17%;
+                height: 100%;
+                padding: 1.5vw;
+                text-align: center;
+                vertical-align: top;
+            }
+            .blog .date .day {
+                text-align: center;
+                font-size: 3em;
+                font-weight: bold;
+            }
+            .blog .date .month {
+                text-transform: uppercase;
+                font-size: 1em;
+            }
+            .blog .date .month {
+                text-transform: uppercase;
+                font-size: 1em;
+            }
+            .blog .post .title {
+                text-align: left;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                color: #262831;
+                margin-bottom: 0.5vw;
+            }            
+            .blog a, .blog a:visited, .blog a:link, .blog a:hover  {
+                text-decoration: none;
+                color: #262831;
+                font-weight: bold;
+            }
+            .footer {
+                margin-top: 3vw;
+                background-color: #1e1f25;
+                color: #ebf1e0;
+                padding: 2vw;
+                text-align: center;
+                line-height: 250%;
+            }
+            .footer img {
+                width: 50px;
+                opacity: 0.5;
+            }
+            @media screen and (min-width:1200px) {
+            .outer {
+                width: 45vw;
+                margin: auto;
+            }
+            .writing td {
+                vertical-align: top;
+                width: 50%;
+                color: #ebf1e0;
+            }
+            }
+            
+            @media screen and (min-width:1000px) and (max-width: 1200px) {
+            .outer {
+                width: 55vw;
+                margin: auto;
+            }
+            .writing td {
+                vertical-align: top;
+                width: 50%;
+                color: #ebf1e0;
+            }
+            }
+            @media screen and (min-width:850px) and (max-width: 1000px) {
+            .outer {
+                width: 70vw;
+                margin: auto;
+            }
+            .writing td {
+                vertical-align: top;
+                width: 50%;
+                color: #ebf1e0;
+            }
+            }
+            @media screen and (max-width:850px) {
+            .outer {
+                width: 90vw;
+                margin: auto;
+            }
+            .writing td {
+                vertical-align: top;
+                display: inline-block;
+                color: #ebf1e0;
+            }
+            .blog .post {
+                padding: 3vw;}
+            p {
+                padding: 3vw;}
+            .blog .date {display: none;}
+            .blog .date .day {font-size: 1em; display: inline-block;}
+            .blog .date .month {font-size: 1em; display: inline-block;}
+            .blog .tags {display: none;}
+            .blog .post .title {text-align: center;} 
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        {{content}}
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    </body>
+</html>
