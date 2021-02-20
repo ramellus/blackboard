@@ -1,0 +1,75 @@
+<div class="outer">
+    <div class="container">
+    <div class="avatar"><img src="picture.jpg"></div>
+    <h1>{{ site.title }}</h1>
+    <div class="header">
+        Subtitle / links / whatever
+    </div>
+    <p class="welcome">Welcome text here.</p>
+    <p class="quote">
+        A quote.
+    </p>
+    <h2><a id="writing">Title of the block (medium)</a></h2>
+    <div class="middle">
+    <table style="border-spacing: 0px; width: 100%;">
+    <tr class="writing">
+    <td>
+    <p>
+        One column.    
+    </p>
+    </td>
+    <td>
+    <p>
+        Another column.    
+    </p>
+    </td>
+    </tr>
+    </table></div>
+    <h2><a id="blog">Blog posts</a></h2>
+    <div class="blog">
+    {% for post in site.posts %}
+    <table style="border-spacing: 0px; width: 100%;">
+    <tr>
+    <td class="date">
+        <div class="day">
+        {{ post.date | date: "%d" }}
+        </div>
+        <div class="month">
+        {{ post.date | date: "%b %Y" }}
+        </div>
+    </td>
+    <td class="post">
+        <div class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+        {{ post.content | strip_html | truncate: 600 | replace: '&', '&amp;' }}
+    </td>
+    </tr>
+    </table>
+    {% endfor %}
+    </div>
+    <h2><a id="community">Title of the block (medium)</a></h2>
+    <div class="middle">
+    <table style="border-spacing: 0px;width: 100%;">
+    <tr class="writing">
+    <td>
+    <p>
+        One column.
+    </p>
+    </td>
+    <td>
+    <p>
+        Another column.
+    </p>
+    </td>
+    </tr>
+    </table></div>
+    <h2><a id="coloured">Title of the block (coloured)</a></h2>
+    <div class="coloured">
+        <div style="text-align: center;">
+            One column only, coloured background.
+        </div>
+    </div>
+    <div class="footer">
+        Insert your footer here.
+    </div>
+    </div>
+</div>
