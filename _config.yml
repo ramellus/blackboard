@@ -28,7 +28,7 @@ twitter_username: tw
 github_username:  gh
 
 # Build settings
-theme: 
+theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
